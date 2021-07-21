@@ -26,6 +26,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/client/views/index.html",
       filename: "./index.html",
+      inject: true
     }),
     new CleanWebpackPlugin({
       // Simulate the removal of files

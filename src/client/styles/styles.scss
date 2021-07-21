@@ -1,0 +1,216 @@
+body {
+  background: #EFA53A;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#app {
+  display: grid;
+  /*  grid-auto-rows: minmax(150px, auto); */
+  /*  grid-template-columns:  */
+  /*  height: 100vh; */
+  background: #EFA53A;
+  color: #924F9E;
+  justify-content: center;
+  grid-gap: 1em;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.holder {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: auto;
+}
+
+.info_holder {
+  margin-top: auto;
+  margin-bottom: auto;
+  height: auto;
+}
+
+#entryHolder {}
+
+#date {}
+
+#temp {}
+
+#content {}
+
+.headline {}
+
+.title {}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label {
+  display: block;
+  font-size: 27px;
+}
+
+input {
+  display: block;
+  height: 60px;
+  width: 320px;
+  background: #924F9E;
+  color: #FFFFF8;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  border: none;
+}
+
+button {
+  width: 400px;
+  height: 100px;
+  background: #924F9E;
+  color: #fffff8;
+  font-size: 26px;
+  font-family: 'Oswald', sans-serif;
+  border: none;
+  box-shadow: 2px 4px 5px #444;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+textarea {
+  background: #CCF4FE;
+  color: #924F9E;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+/* Style for Placeholder Text*/
+::placeholder {
+  /* Firefox, Chrome, Opera */
+  color: #fffff8;
+  font-family: 'Oswald', sans-serif;
+}
+
+::-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fffff8;
+  font-family: 'Oswald', sans-serif;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #fffff8;
+  font-family: 'Oswald', sans-serif;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  text-align: center;
+  width: 100%;
+  grid-gap: 1em;
+}
+
+/* Generic flex layout*/
+.flex-container {
+  display: flex;
+  justify-content: center;
+  /*  justify-content: space-between; */
+  flex-flow: row wrap;
+}
+
+.flex-row {
+  flex-flow: row wrap;
+}
+
+.header {
+  border-radius: 10px 10px 10px 10px;
+  background: #CCF4FE;
+  height: 100px;
+  border-color: #626EDA;
+  border-style: solid;
+  border-width: 5px;
+  /*  grid-column-start: 1;
+  grid-column-end: 3; */
+  width: 95%;
+  color: #924F9E;
+}
+
+.border {
+  border-radius: 10px 10px 10px 10px;
+  border-color: #626EDA;
+  border-style: solid;
+  border-width: 5px;
+  background-color: #CCF4FE;
+  min-width: 420px;
+  width: 43%;
+  color: #924F9E;
+  margin: 2%
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vertical {
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 100%;
+}
+
+.entry {
+  height: 100px;
+}
+
+.image {
+  max-width: 350px;
+  max-height: 350px;
+  width: auto;
+  height: auto;
+}
+
+/*
+-----------------------------------------------
+*/
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
