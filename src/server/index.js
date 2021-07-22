@@ -1,5 +1,4 @@
-import '../client/styles/styles.scss'
-import '../client/index.js'
+
 
 const dotenv = require('dotenv');
 dotenv.config();
@@ -37,7 +36,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static('dist'))
 
 // Setup Server
-const port = 8080;
+const port = 3000;
 // Spin up the server
 // const server = app.listen(port, () => console.log(`Running on localhost: ${port}`));
 // designates what port the app will listen to for incoming requests

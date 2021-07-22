@@ -14,10 +14,21 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: '/\.js$/',
-      exclude: /node_modules/,
-      loader: "babel-loader"
-    }]
+        test: '/\.js$/',
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      },
+      {
+        test: /\.[ac]ss$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
+      }
+    ]
   },
   plugins: [
     new HtmlWebPackPlugin({

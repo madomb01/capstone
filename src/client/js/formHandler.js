@@ -6,6 +6,7 @@ let d = new Date();
 
 /* Function called by event listener */
 export async function tripInfo() {
+  console.log("tripInfo called!");
   let destination = document.getElementById("destination").value;
   let departureDate = document.getElementById("departureDate").value;
   let returnDate = document.getElementById("returnDate").value;
@@ -26,20 +27,21 @@ export async function tripInfo() {
     console.log(body);
     //      Function to POST data
 
-    fetch('http://localhost:3000/postTripData', {
+    await fetch('http://localhost:3000/postTripData', {
       method: 'POST',
       credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(body)
-    }).then(getData());
+    }).then(await getData());
 
   }
 }
 
 /* Function to GET Project Data */
 export async function getData() {
+  console.log("getData called");
   let temp = fetch('http://localhost:3000/getData', {
     method: 'GET',
     credentials: 'same-origin',
