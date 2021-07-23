@@ -37,7 +37,6 @@ app.listen(port, function() {
   console.log(`Listening at http://localhost:${port}`);
 })
 
-
 // Callback function to complete GET '/all'
 app.post('/postTripData', async (req, res) => {
 

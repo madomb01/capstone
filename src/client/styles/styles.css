@@ -5,9 +5,7 @@ body {
 
 #app {
   display: grid;
-  /*  grid-auto-rows: minmax(150px, auto); */
-  /*  grid-template-columns:  */
-  /*  height: 100vh; */
+
   background: #EFA53A;
   color: #924F9E;
   justify-content: center;
@@ -133,8 +131,7 @@ button:focus {
   border-color: #626EDA;
   border-style: solid;
   border-width: 5px;
-  /*  grid-column-start: 1;
-  grid-column-end: 3; */
+
   width: 95%;
   color: #924F9E;
 }
@@ -172,10 +169,6 @@ button:focus {
   width: auto;
   height: auto;
 }
-
-/*
------------------------------------------------
-*/
 
 .tooltip {
   position: relative;
