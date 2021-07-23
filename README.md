@@ -5,17 +5,17 @@ This project is a travel app that obtains a desired trip location based on zip c
 
 ##How To Use
 1. npm install
-2. npm install --save-dev mini-css-extract-plugin
-3. npm install --save-dev jest
-4. npm install dotenv
-5. npm install axios
-5. Create a .env file containing your API keys
+2. Create a .env file containing your API keys
   1. PX_API_KEY = {KEY}
   2. GN_API_KEY = {Username}
   3. WB_API_KEY = {KEY}
-6. npm run build-dev
-7. npm run build-prod
-8. npm start
+3. npm run build-prod
+  1. Optionally, npm run build-dev
+4. npm start
+5. Go to localhost:3000 to use Travel Planner App
+
+##Known Issues
+1. Due to API request times vs server request times, the "Plan Trip!" button may need to be pressed twice to show data obtained via API.
 
 ##References
 Below is a list of references that were used in creation of this project.
@@ -33,10 +33,6 @@ Below is a list of references that were used in creation of this project.
 11. https://knowledge.udacity.com/questions/248560
 12. https://knowledge.udacity.com/questions/110098
 13. https://knowledge.udacity.com/questions/248560
-14. Udacity projects 3 & 4 of the Front End Developer program (as of July, 2021)
-
-------------------------
-
-
-PORT 3000
-NODE SERVER.JS
+14. https://knowledge.udacity.com/questions/644252
+15. https://knowledge.udacity.com/questions/647785
+16. Udacity projects 3 & 4 of the Front End Developer program (as of July, 2021)

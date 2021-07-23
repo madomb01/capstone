@@ -1,29 +1,24 @@
-
-
 const dotenv = require('dotenv');
 dotenv.config();
 projectData = {};
 const PX_API_KEY = process.env.PX_API_KEY;
 const GN_API_KEY = process.env.GN_API_KEY;
 const WB_API_KEY = process.env.WB_API_KEY;
-let path = require('path')
 const express = require('express')
 const fetch = require('node-fetch')
 const bodyParser = require('body-parser');
 const cors = require('cors')
+const axios = require("axios");
 
+let path = require('path')
 let baseURL_Geonames = 'http://api.geonames.org/searchJSON?q=';
 let baseURL_Pixabay = "https://pixabay.com/api/?key=" + PX_API_KEY + "&q=";
-const axios = require("axios");
-let days = /* [date of trip] - [current date]; */ 1
+let days = 1
 let dailyweather = days - 1;
 if (
   dailyweather > 15) {
   dailyweather = 15
 };
-
-
-
 
 const app = express()
 app.use(cors())
@@ -38,8 +33,6 @@ app.use(express.static('dist'))
 // Setup Server
 const port = 3000;
 // Spin up the server
-// const server = app.listen(port, () => console.log(`Running on localhost: ${port}`));
-// designates what port the app will listen to for incoming requests
 app.listen(port, function() {
   console.log(`Listening at http://localhost:${port}`);
 })
@@ -47,15 +40,8 @@ app.listen(port, function() {
 
 // Callback function to complete GET '/all'
 app.post('/postTripData', async (req, res) => {
-  //  projectData = {};
-  //res.send(projectData);
 
-
-  /*  Hijacked method!!!!! Don't forget to change later!!!!! */
-
-  let city = req.body.destination //document.getElementById("city").value;
-  //  let zip = document.getElementById("zip").value;
-  //  let username = GN_API_KEY //document.getElementById("username").value;
+  let city = req.body.destination
   if (
     city != "") {
     /* Function to GET Web API Data*/
@@ -63,7 +49,6 @@ app.post('/postTripData', async (req, res) => {
     await temp.then(async res => {
       let weather = axios.get("https://api.weatherbit.io/v2.0/forecast/daily?lat=" + res.data.geonames[0].lat + "&lon=" + res.data.geonames[0].lng + "&key=" + "f2bc8e5508d747e4ae3f1c8bbc11981a");
       let picture = axios.get(baseURL_Pixabay + res.data.geonames[0].name.replace(" ", "+") + "&image_type=photo");
-      //      console.log(encodeURIComponent(res.data.geonames[0].name));
 
       await weather.then(heat => {
         console.log("settingtemperature");
