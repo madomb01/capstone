@@ -10,12 +10,9 @@ This project is a travel app that obtains a desired trip location based on zip c
   2. GN_API_KEY = {Username}
   3. WB_API_KEY = {KEY}
 3. npm run build-prod
-  1. Optionally, npm run build-dev
+  1. Optionally, npm run build-dev and go to localhost:8080
 4. npm start
 5. Go to localhost:3000 to use Travel Planner App
-
-##Known Issues
-1. Due to API request times vs server request times, the "Plan Trip!" button may need to be pressed twice to show data obtained via API.
 
 ##References
 Below is a list of references that were used in creation of this project.

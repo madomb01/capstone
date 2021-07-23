@@ -64,6 +64,7 @@ app.post('/postTripData', async (req, res) => {
       });
     });
   }
+  res.send(projectData);
 });
 
 app.get('/getData', (req, res) => {

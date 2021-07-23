@@ -22,14 +22,17 @@ export async function tripInfo() {
     };
     console.log(body);
     //      Function to POST data
-    await fetch('http://localhost:3000/postTripData', {
+
+    const data = await fetch('http://localhost:3000/postTripData', {
       method: 'POST',
       credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(body)
-    }).then(await getData());
+    });
+
+    const data2 = await getData();
 
   }
 }
