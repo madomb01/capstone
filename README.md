@@ -3,6 +3,9 @@
 ##Overview
 This project is a travel app that obtains a desired trip location based on zip code or city name, a departure date, and a return date from the user, and displays the weather (no more than 16 days out from the current date as per the API) from the Weatherbit API and an image of the location using information obtained from the Pixabay API after obtaining the destination information from GeoNames.
 
+##Featured Stand Out
+This project allows users to add and end date and display the length of the trip.
+
 ##How To Use
 1. npm install
 2. Create a .env file containing your API keys
