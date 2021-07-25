@@ -14,6 +14,7 @@ This project allows users to add and end date and display the length of the trip
   3. WB_API_KEY = {KEY}
 3. npm run build-prod
   1. Optionally, npm run build-dev and go to localhost:8080
+  2. Optionally, npm run test to test all functions in the app
 4. npm start
 5. Go to localhost:3000 to use Travel Planner App
 
