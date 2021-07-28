@@ -1,6 +1,6 @@
 const dotenv = require('dotenv');
 dotenv.config();
-projectData = {};
+let projectData = {};
 const PX_API_KEY = process.env.PX_API_KEY;
 const GN_API_KEY = process.env.GN_API_KEY;
 const WB_API_KEY = process.env.WB_API_KEY;
@@ -9,6 +9,7 @@ const fetch = require('node-fetch')
 const bodyParser = require('body-parser');
 const cors = require('cors')
 const axios = require("axios");
+const supertest = require('supertest')
 
 let path = require('path')
 let baseURL_Geonames = 'http://api.geonames.org/searchJSON?q=';
@@ -30,12 +31,15 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(express.static('dist'))
 
+module.exports = app
+
 // Setup Server
 const port = 3000;
 // Spin up the server
 app.listen(port, function() {
   console.log(`Listening at http://localhost:${port}`);
 })
+
 
 // Callback function to complete GET '/all'
 app.post('/postTripData', async (req, res) => {
